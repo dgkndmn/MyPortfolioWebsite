@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{%block content%}
+
+<style>
+
+body {
+    background-color: #e0e0e0;
+}
+
+
+.header-line{
+    border-top: 2px solid #000;
+}
+
+
+
+
+.image-container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .text-deneme {
+      width: 90%;
+      margin-left: 6%;
+      margin-top: 10%;
+    }
+
+    .image-container{
+      width: 200%;
+      margin-left: -50%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .text-deneme{
+      font-family: "American Typewriter Bold";
+      font-size: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 40px;
+      max-width:42%;
+      text-align: left;
+    }  
+  }
+
+
+</style>
+
+<div class="header-line"></div>
+
+<div class="image-container">
+<img src="{% static 'dogukan4.jpeg' %}" style="width:25%; padding:10px;">
+<img src="{% static 'dogukan6.jpeg' %}" style="width:25%; padding:10px;">
+</div>
+<div class="text-deneme">
+    <p>Hi, it's Dogukan. I was born in Istanbul and I am a 21-year-old student. Let me tell you about my academical life. I graduated from the 2-year computer programming program at Istanbul University-Cerrahpaşa. Then I wanted to become an engineer and I took a vertical-transfer exam (DGS). After this exam, I've qualified to software-engineering program with full scholarship at Beykent University and i'm still there. If I have to talk a little bit about my hobbies, i love listen to music. (especially classical music, hip-hop, rock, heavy-metal etc.) My favourite instrument is piano and I can play some. I've been doing fitness about 4 years. I like reading books, it really relaxes me. I'm interested in learning languages. Learning and adding something to myself gives me pleasure. I'm interested in technology and coding. I'm trying to improve myself on back-end. I did some school projects with C# language on Visual Studio and I know some SQL Server. Nowadays I'm trying to improve myself on Python. I'm using Django, Bootstrap, CSS. </p>
+  </div>
+{%endblock%}

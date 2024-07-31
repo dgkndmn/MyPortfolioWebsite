@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{%load static%}
+{%block content%}
+
+<style>
+
+body {
+    background-color: #e0e0e0;
+}
+
+
+.header-line{
+    border-top: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+    .text-deneme {
+      width: 70%;
+      margin-left: 10%;
+      margin-top: 10%;
+    }
+
+    .mybuttons{
+        margin-left:10%;
+        margin-top:10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .text-deneme{
+        font-family: "American Typewriter Bold";
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: 250px;
+        margin-top: 150px;
+        max-width:70%;
+        text-align:center;   
+    }
+
+    .mybuttons{
+        margin-left:740px;
+        padding:30px;
+    }
+  }
+ 
+    
+
+
+</style>
+
+<div class="header-line"></div>
+
+<div class="text-deneme">Thanks for visiting my website. If you want to contact me, you can find my social media, github and linkedin addresses down below. Have a nice day. </div>
+
+<div class="container mybuttons">
+    <a href="https://linkedin.com/in/doğukan-duman-4bb384273/" target="_blank" class="btn btn-light btn-lg" style="border: 2px solid #000; display: inline-flex; align-items: center;">
+    <img src="{% static 'linkedin.svg' %}" style="width: 30px; height:30px; margin-right: 5px;">
+    LinkedIn</a>
+    <a href="https://github.com/dgkndmn" target="_blank" class="btn btn-light btn-lg" style="border: 2px solid #000; display: inline-flex; align-items: center;">
+    <img src="{% static 'github.svg' %}" style="width: 30px; height:30px; margin-right: 8px;">  
+      Github</a>
+    <a href="https://instagram.com/dogukan.duman07" target="_blank" class="btn btn-light btn-lg" style="border: 2px solid #000; display: inline-flex; align-items: center;">
+    <img src="{% static 'instagram.svg' %}" style="width: 30px; height: 30px; margin-right:5px;">
+    Instagram
+    </a>
+</div>
+
+
+
+{%endblock%}
